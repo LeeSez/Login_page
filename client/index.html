@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css" />
+    <script src="main.js"></script>
+</head>
+<body onload="initiate()">
+    <div class="flex wrapper">
+        <div class="flex mainForm" id="loginForm">
+            <h3>Login</h3>
+            <input type="text" id="inputLoginEmail" placeholder="Email"/>
+            <input type="password" id="inputLoginPassword" placeholder="Password"/>
+            <button onclick="login()" id="btnLogin">LOG IN</button>
+            <p>Haven't signed up yet? <span onclick="showRegister()">sign up!</span></p>
+        </div>
+
+        <div class="flex mainForm" id="registerForm">
+            <h3>Register</h3>
+            <input type="text" id="inputRegisterEmail" placeholder="Email" onchange="checkEmail()"/>
+            <input type="password" id="inputRegisterPassword" placeholder="Password" onchange="checkPassword()"/>
+            <input type="password" id="inputRegisterPasswordR" placeholder="Repeat password" onchange="checkkSecondPassword()"/>
+            <button onclick="register()" id="btnRegister">Register</button>
+            <p>Already have an account? <span onclick="hideRegister()">Log in!</span></p>
+        </div>
+    </div>
+</body>
+</html>
